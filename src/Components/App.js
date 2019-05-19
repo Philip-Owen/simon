@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Block from './Block';
 import '../App.css';
 
-class App extends Component {
-	render() {
-		return (
+import useGlobal from '../Store';
+
+const App = () => {
+	const [globalState, globalActions] = useGlobal();
+	const { startGame } = globalActions;
+	return (
+		<div>
 			<div>
-				<div>
-					<button>Start Game</button>
-				</div>
-				<div className="row">
-					<Block color="red" />
-					<Block color="blue" />
-				</div>
-				<div className="row">
-					<Block color="green" />
-					<Block color="yellow" />
-				</div>
+				<button onClick={startGame}>Start Game</button>
 			</div>
-		);
-	}
-}
+			<div className="row">
+				<Block color="red" />
+				<Block color="blue" />
+			</div>
+			<div className="row">
+				<Block color="green" />
+				<Block color="yellow" />
+			</div>
+		</div>
+	);
+};
 
 export default App;

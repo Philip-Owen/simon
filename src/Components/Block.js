@@ -4,11 +4,12 @@ import useGlobal from '../Store';
 
 const Block = props => {
 	const [globalState, globalActions] = useGlobal();
-	const { lightenColor, darkenColor } = globalActions;
+	const { lightenColor, darkenColor, getUserPattern } = globalActions;
 	const { color } = props;
 	const handleMouseDown = () => lightenColor(color);
-	const handleMouseUp = () => darkenColor(color);
-	return <div id={color} className="block" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} />;
+	const handleMouseUp = () => darkenColor(color, 100);
+	const handleClick = () => getUserPattern(color)
+	return <div id={color} className="block" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onClick={handleClick} />;
 };
 
 export default Block;
