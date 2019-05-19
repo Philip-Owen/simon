@@ -5,7 +5,7 @@ import '../App.css';
 import useGlobal from '../Store';
 
 const App = () => {
-	const [globalState, globalActions] = useGlobal();
+	const [, globalActions] = useGlobal();
 	const { startGame } = globalActions;
 	return (
 		<div>

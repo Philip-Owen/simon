@@ -3,7 +3,7 @@ import React from 'react';
 import useGlobal from '../Store';
 
 const Block = props => {
-	const [globalState, globalActions] = useGlobal();
+	const [, globalActions] = useGlobal();
 	const { lightenColor, darkenColor, getUserPattern } = globalActions;
 	const { color } = props;
 	const handleMouseDown = () => lightenColor(color);
