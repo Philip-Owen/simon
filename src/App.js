@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Block from './Block';
+import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Simon</h1>
-    </div>
-  );
+class App extends Component {
+	render() {
+		return (
+			<div>
+				<div className="row">
+					<Block color="red" />
+					<Block color="blue" />
+				</div>
+				<div className="row">
+					<Block color="green" />
+					<Block color="yellow" />
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;
