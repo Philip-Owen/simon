@@ -1,21 +1,46 @@
+body {
+  background: gray;
+}
+
 .block {
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 250px;
+  width: 250px;
+  margin: 20px;
 }
 
 #red {
+  height: 100%;
+  width: 100%;
   background-color: red;
+  border-radius: 5px;
+  border-top-left-radius: 600px;
+  border: black 10px solid;
 }
 
 #blue {
+  height: 100%;
+  width: 100%;
   background-color: blue;
+  border-radius: 5px;
+  border-top-right-radius: 600px;
+  border: black 10px solid;
 }
 
 #green {
+  height: 100%;
+  width: 100%;
   background-color: green;
+  border-radius: 5px;
+  border-bottom-left-radius: 600px;
+  border: black 10px solid;
 }
 
 #yellow {
+  height: 100%;
+  width: 100%;
   background-color: yellow;
+  border-radius: 5px;
+  border-bottom-right-radius: 600px;
+  border: black 10px solid;
 }

@@ -2,16 +2,24 @@ export const lightenColor = (store, color) => {
 	const change = document.getElementById(color);
 	switch (color) {
 		case 'red':
-			change.style.backgroundColor = `#ef6262`;
+      change.style.backgroundColor = `#ef6262`;
+      change.style.borderRight = 'black 8px solid';
+      change.style.borderBottom = 'black 8px solid';
 			break;
 		case 'blue':
-			change.style.backgroundColor = `#6a6aff`;
+      change.style.backgroundColor = `#6a6aff`;
+      change.style.borderLeft = 'black 8px solid';
+      change.style.borderBottom = 'black 8px solid';
 			break;
 		case 'green':
-			change.style.backgroundColor = `#57b357`;
+      change.style.backgroundColor = `#57b357`;
+      change.style.borderRight = 'black 8px solid';
+      change.style.borderTop = 'black 8px solid';
 			break;
 		case 'yellow':
-			change.style.backgroundColor = '#f5f572';
+      change.style.backgroundColor = '#FFFFBB';
+      change.style.borderLeft = 'black 8px solid';
+      change.style.borderTop = 'black 8px solid';
 			break;
 		default:
 			break;
@@ -22,7 +30,8 @@ export const darkenColor = (store, color, timer) => {
 	setTimeout(
 		function(color) {
 			const change = document.getElementById(color);
-			change.style.backgroundColor = color;
+      change.style.backgroundColor = color;
+      change.style.border = 'black 10px solid';
 		},
 		timer,
 		color

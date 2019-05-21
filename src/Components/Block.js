@@ -8,8 +8,12 @@ const Block = props => {
 	const { color } = props;
 	const handleMouseDown = () => lightenColor(color);
 	const handleMouseUp = () => darkenColor(color, 100);
-	const handleClick = () => getUserPattern(color)
-	return <div id={color} className="block" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onClick={handleClick} />;
+	const handleClick = () => getUserPattern(color);
+	return (
+		<div className="block" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onClick={handleClick}>
+			<div id={color} />
+		</div>
+	);
 };
 
 export default Block;

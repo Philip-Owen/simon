@@ -8,17 +8,17 @@ const App = () => {
 	const [, globalActions] = useGlobal();
 	const { startGame } = globalActions;
 	return (
-		<div>
-			<div>
-				<button onClick={startGame}>Start Game</button>
-			</div>
-			<div className="row">
-				<Block color="red" />
-				<Block color="blue" />
-			</div>
-			<div className="row">
-				<Block color="green" />
-				<Block color="yellow" />
+		<div className="app">
+			<button onClick={startGame}>Start Game</button>
+			<div className="simon">
+				<div className="row">
+					<Block color="red" />
+					<Block color="blue" />
+				</div>
+				<div className="row">
+					<Block color="green" />
+					<Block color="yellow" />
+				</div>
 			</div>
 		</div>
 	);
