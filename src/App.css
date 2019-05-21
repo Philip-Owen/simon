@@ -9,6 +9,10 @@ body {
   margin: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 #red {
   height: 100%;
   width: 100%;

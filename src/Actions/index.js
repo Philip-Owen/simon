@@ -44,7 +44,7 @@ export const startGame = store => {
 	if (store.state.gameStarted) {
 		return;
 	}
-	store.setState({ gameStarted: true });
+	store.setState({ gameStarted: true, counter: 0 });
 	createPattern(store);
 };
 
@@ -101,10 +101,9 @@ const continueGame = store => {
 
 const endGame = store => {
 	const pattern = [];
-	const counter = 0;
 	const userCounter = 0;
 	const gameStarted = false;
-	store.setState({ pattern, counter, userCounter, gameStarted });
+	store.setState({ pattern, userCounter, gameStarted });
 	return;
 };
 
